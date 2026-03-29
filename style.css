@@ -127,8 +127,6 @@ section{
     background-color: var(--black);
     gap: 1.5rem; /*Afastar os itens*/
 }
-
-
 .about .row .content{
     padding: 2rem;
 
@@ -145,4 +143,47 @@ section{
     line-height: 1.8;/*Distanciamento de uma linha pra outra*/
 
 }
+.menu .box-conteiner {
+    display: grid; /*Organizar alinhas os itens automatico, caso add masi itens futuramente*/
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+
+}
+.menu .box-conteiner .box{
+    text-align: center;
+    border: var(--border);
+    padding: 5rem;
+    cursor: pointer;
+}
+
+.menu .box-conteiner .box img{
+    height: 10rem;
+}
+.menu .box-conteiner .box h3{
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 0;
+
+}
+.menu .box-conteiner .box .price{
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+}
+.menu .box-conteiner .box .price span{
+    font-size: 1.5rem;
+    text-decoration: line-through;/*Linha cortando o texto*/
+    font-weight: 100;
+}
+.menu .box-conteiner .box:hover{
+    background-color: #fff;
+    transition: 2s;
+}
+.menu .box-conteiner .box:hover>*{ /*Aplicar para todo mundo dentro do box*/
+    color: var(--black);
+
+}
+
+
+
 
